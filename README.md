@@ -63,7 +63,7 @@ Dengan NutriSnap, cukup foto makanan Anda dan biarkan AI canggih kami yang melak
 
 | Dashboard Utama | Pelacakan Nutrisi | Perencanaan Makan |
 |:--------------:|:------------------:|:-------------:|
-| ![Home](https://via.placeholder.com/250x500/00E676/FFFFFF?text=Dashboard+NutriSnap) | ![Tracking](https://via.placeholder.com/250x500/69F0AE/FFFFFF?text=Analisis+AI) | ![Meals](https://via.placeholder.com/250x500/B9F6CA/FFFFFF?text=Rencana+Makan) |
+| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Tracking](https://via.placeholder.com/250x500/69F0AE/FFFFFF?text=Analisis+AI) | ![Meals](https://via.placeholder.com/250x500/B9F6CA/FFFFFF?text=Rencana+Makan) |
 
 </div>
 
