@@ -12,8 +12,8 @@
 </div>
 
 ## 🧑‍💻Author
-- **Dandi Mulyana 232101182
-- **Nopi Damayanti 232101261
+- Dandi Mulyana 232101182
+- Nopi Damayanti 232101261
 
 ## 🌟 Tentang NutriSnap
 
