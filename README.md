@@ -15,6 +15,16 @@
 
 NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara Anda melacak nutrisi harian. Dengan menggabungkan teknologi AI mutakhir dan desain yang user-friendly, kami membuat pola makan sehat menjadi lebih sederhana, lebih cerdas, dan lebih mudah diakses daripada sebelumnya.
 
+## 📱 Tangkapan Layar
+
+<div align="center">
+
+| Home Screen 1 | Home Screen 2 | Splash Screen |
+|:--------------:|:------------------:|:-------------:|
+| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Home2](https://github.com/user-attachments/assets/a544eb87-2e15-454e-a27d-4d4bc054e947) | ![Splash](https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e) |
+
+</div>
+
 ### 🎯 Mengapa Memilih NutriSnap?
 
 > "Menghitung kalori secara tradisional rumit dan memakan waktu. Kami mengubahnya."
@@ -56,16 +66,6 @@ Dengan NutriSnap, cukup foto makanan Anda dan biarkan AI canggih kami yang melak
 - **UI/UX**: Material Design 3 dengan tema kustom
 - **Animasi**: Flutter Native Animations
 - **AI Masa Depan**: Google ML Kit + TensorFlow Lite
-
-## 📱 Tangkapan Layar
-
-<div align="center">
-
-| Home Screen 1 | Home Screen 2 | Splash Screen |
-|:--------------:|:------------------:|:-------------:|
-| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Home2](https://github.com/user-attachments/assets/a544eb87-2e15-454e-a27d-4d4bc054e947) | ![Splash](https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e) |
-
-</div>
 
 ## 🎯 Untuk Siapa NutriSnap?
 
