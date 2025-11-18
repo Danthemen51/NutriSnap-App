@@ -11,6 +11,10 @@
 
 </div>
 
+## 🧑‍💻Author
+- **Dandi Mulyana 232101182
+- **Nopi Damayanti 232101261
+
 ## 🌟 Tentang NutriSnap
 
 NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara Anda melacak nutrisi harian. Dengan menggabungkan teknologi AI mutakhir dan desain yang user-friendly, kami membuat pola makan sehat menjadi lebih sederhana, lebih cerdas, dan lebih mudah diakses daripada sebelumnya.
