@@ -1,118 +1,178 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../models/food_item.dart';
+import '../providers/app_providers.dart';
+import 'dart:io';
 
-class RecentlyEatenSection extends StatelessWidget {
+class RecentlyEatenSection extends ConsumerWidget {
   const RecentlyEatenSection({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final recentlyEaten = ref.watch(recentlyEatenProvider);
+
+    if (recentlyEaten.isEmpty) {
+      return _buildEmptyState();
+    }
+
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 16),
-      padding: EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
-          BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 2)),
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 8,
+            offset: Offset(0, 2),
+          ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Section Title
-          Text(
-            'Recently Eaten',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.black87,
-              fontFamily: 'Poppins',
-            ),
+          Row(
+            children: [
+              Icon(
+                Icons.history,
+                color: Color(0xFF00E676),
+                size: 20,
+              ),
+              SizedBox(width: 8),
+              Text(
+                'Recently Eaten',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ],
           ),
           SizedBox(height: 16),
 
           // Food Items List
           Column(
+            children: recentlyEaten.take(3).map((food) => 
+              _RecentlyEatenItem(food: food)
+            ).toList(),
+          ),
+
+          // Show More Button jika ada lebih dari 3 item
+          if (recentlyEaten.length > 3) 
+            Padding(
+              padding: const EdgeInsets.only(top: 12),
+              child: Center(
+                child: TextButton(
+                  onPressed: () {
+                    // TODO: Navigate to full history screen
+                  },
+                  child: Text(
+                    'View All (${recentlyEaten.length})',
+                    style: TextStyle(
+                      color: Color(0xFF00E676),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildEmptyState() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 8,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Section Title
+          Row(
             children: [
-              _RecentlyEatenItem(
-                foodName: 'Fried Chicken Bowl',
-                calories: 250,
-                nutrients: [
-                  NutrientInfo(
-                    type: 'carb',
-                    amount: 6,
-                    color: Color(0xFFFF9800),
-                  ),
-                  NutrientInfo(
-                    type: 'protein',
-                    amount: 30,
-                    color: Color(0xFF2196F3),
-                  ),
-                  NutrientInfo(
-                    type: 'fat',
-                    amount: 12,
-                    color: Color(0xFFF44336),
-                  ),
-                  NutrientInfo(
-                    type: 'fibre',
-                    amount: 12,
-                    color: Color(0xFF9C27B0),
-                  ),
-                ],
-                time: '18:10',
-                date: 'Today',
-                imageUrl: 'assets/images/chicken_bowl.jpg',
+              Icon(
+                Icons.history,
+                color: Color(0xFF00E676),
+                size: 20,
               ),
-              SizedBox(height: 12),
-              _RecentlyEatenItem(
-                foodName: 'Greek Yogurt with Berries',
-                calories: 180,
-                nutrients: [
-                  NutrientInfo(
-                    type: 'protein',
-                    amount: 15,
-                    color: Color(0xFF2196F3),
-                  ),
-                  NutrientInfo(
-                    type: 'carb',
-                    amount: 20,
-                    color: Color(0xFFFF9800),
-                  ),
-                  NutrientInfo(
-                    type: 'fibre',
-                    amount: 5,
-                    color: Color(0xFF9C27B0),
-                  ),
-                ],
-                time: '15:30',
-                date: 'Today',
-                imageUrl: 'assets/images/greek_yogurt.jpg',
-              ),
-              SizedBox(height: 12),
-              _RecentlyEatenItem(
-                foodName: 'Avocado Toast',
-                calories: 320,
-                nutrients: [
-                  NutrientInfo(
-                    type: 'carb',
-                    amount: 35,
-                    color: Color(0xFFFF9800),
-                  ),
-                  NutrientInfo(
-                    type: 'fat',
-                    amount: 18,
-                    color: Color(0xFFF44336),
-                  ),
-                  NutrientInfo(
-                    type: 'fibre',
-                    amount: 9,
-                    color: Color(0xFF9C27B0),
-                  ),
-                ],
-                time: '12:45',
-                date: 'Today',
-                imageUrl: 'assets/images/avocado_toast.jpg',
+              SizedBox(width: 8),
+              Text(
+                'Recently Eaten',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87,
+                  fontFamily: 'Poppins',
+                ),
               ),
             ],
+          ),
+          SizedBox(height: 16),
+
+          // Empty State
+          Container(
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: Colors.grey[50],
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Colors.grey[200]!),
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.fastfood_outlined,
+                  color: Colors.grey[400],
+                  size: 48,
+                ),
+                SizedBox(height: 12),
+                Text(
+                  'No food items yet',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey[600],
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Foods you add will appear here',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey[500],
+                    fontFamily: 'Poppins',
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 16),
+                Text(
+                  '💡 Tip: Tap on meal times in "Today\'s Meal Plan" to add food',
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Colors.grey[400],
+                    fontFamily: 'Poppins',
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -121,27 +181,18 @@ class RecentlyEatenSection extends StatelessWidget {
 }
 
 class _RecentlyEatenItem extends StatelessWidget {
-  final String foodName;
-  final int calories;
-  final List<NutrientInfo> nutrients;
-  final String time;
-  final String date;
-  final String imageUrl;
+  final FoodItem food;
 
   const _RecentlyEatenItem({
     Key? key,
-    required this.foodName,
-    required this.calories,
-    required this.nutrients,
-    required this.time,
-    required this.date,
-    required this.imageUrl,
+    required this.food,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Colors.grey[50],
         borderRadius: BorderRadius.circular(12),
@@ -149,8 +200,8 @@ class _RecentlyEatenItem extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Food Image dengan custom loading state
-          _FoodImageWithLoading(imageUrl: imageUrl),
+          // Food Image
+          _FoodImageWithLoading(imageUrl: food.imageUrl),
           SizedBox(width: 12),
 
           // Food Details
@@ -160,19 +211,21 @@ class _RecentlyEatenItem extends StatelessWidget {
               children: [
                 // Food Name
                 Text(
-                  foodName,
+                  food.name,
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                     color: Colors.black87,
                     fontFamily: 'Poppins',
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 4),
 
                 // Calories
                 Text(
-                  '$calories Calories',
+                  '${food.calories} Calories',
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
@@ -184,27 +237,41 @@ class _RecentlyEatenItem extends StatelessWidget {
 
                 // Nutrition Details
                 Wrap(
-                  spacing: 8,
+                  spacing: 6,
                   runSpacing: 4,
-                  children: nutrients
-                      .map(
-                        (nutrient) => _NutritionChip(
-                          text: '+ ${nutrient.amount}g ${nutrient.type}',
-                          color: nutrient.color,
-                        ),
-                      )
-                      .toList(),
+                  children: [
+                    if (food.protein > 0)
+                      _NutritionChip(
+                        text: '${food.protein}g protein',
+                        color: Color(0xFF2196F3),
+                      ),
+                    if (food.carbs > 0)
+                      _NutritionChip(
+                        text: '${food.carbs}g carbs',
+                        color: Color(0xFFFF9800),
+                      ),
+                    if (food.fat > 0)
+                      _NutritionChip(
+                        text: '${food.fat}g fat',
+                        color: Color(0xFFF44336),
+                      ),
+                    if (food.fiber > 0)
+                      _NutritionChip(
+                        text: '${food.fiber}g fiber',
+                        color: Color(0xFF9C27B0),
+                      ),
+                  ],
                 ),
               ],
             ),
           ),
 
-          // Time
+          // Time and Meal Type
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
-                time,
+                _formatTime(food.consumedAt),
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
@@ -213,12 +280,20 @@ class _RecentlyEatenItem extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 4),
-              Text(
-                date,
-                style: TextStyle(
-                  fontSize: 11,
-                  color: Colors.grey[500],
-                  fontFamily: 'Poppins',
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                decoration: BoxDecoration(
+                  color: _getMealTypeColor(food.mealType),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(
+                  food.mealType,
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: 'Poppins',
+                  ),
                 ),
               ),
             ],
@@ -226,6 +301,25 @@ class _RecentlyEatenItem extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _formatTime(DateTime time) {
+    return '${time.hour.toString().padLeft(2, '0')}:${time.minute.toString().padLeft(2, '0')}';
+  }
+
+  Color _getMealTypeColor(String mealType) {
+    switch (mealType.toLowerCase()) {
+      case 'breakfast':
+        return Color(0xFFFFB74D);
+      case 'lunch':
+        return Color(0xFF81C784);
+      case 'dinner':
+        return Color(0xFF4DB6AC);
+      case 'snack':
+        return Color(0xFFBA68C8);
+      default:
+        return Color(0xFF00E676);
+    }
   }
 }
 
@@ -301,41 +395,72 @@ class __FoodImageWithLoadingState extends State<_FoodImageWithLoading> {
     if (_hasError) {
       return Container(
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: Color(0xFF00E676).withOpacity(0.1),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Icon(
           Icons.fastfood,
-          color: Colors.grey[500],
+          color: Color(0xFF00E676),
           size: 24,
         ),
       );
     }
 
-    return Image.asset(
-      widget.imageUrl,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        // Set error state untuk future builds
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted) {
-            setState(() {
-              _hasError = true;
+    // Handle local file images - periksa apakah ini path file lokal
+    bool isLocalFile = widget.imageUrl.startsWith('/') || 
+                      widget.imageUrl.startsWith('file://') ||
+                      !widget.imageUrl.contains('http');
+
+    if (isLocalFile) {
+      // Untuk local file images, gunakan Image.file
+      try {
+        return Image.file(
+          File(widget.imageUrl.replaceAll('file://', '')),
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (mounted) {
+                setState(() {
+                  _hasError = true;
+                });
+              }
             });
-          }
-        });
-        return Container(
-          decoration: BoxDecoration(
-            color: Colors.grey[300],
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Icon(
-            Icons.fastfood,
-            color: Colors.grey[500],
-            size: 24,
-          ),
+            return _buildErrorState();
+          },
         );
-      },
+      } catch (e) {
+        return _buildErrorState();
+      }
+    } else {
+      // Untuk network images, gunakan Image.network seperti sebelumnya
+      return Image.network(
+        widget.imageUrl,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (mounted) {
+              setState(() {
+                _hasError = true;
+              });
+            }
+          });
+          return _buildErrorState();
+        },
+      );
+    }
+  }
+
+  Widget _buildErrorState() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(0xFF00E676).withOpacity(0.1),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Icon(
+        Icons.fastfood,
+        color: Color(0xFF00E676),
+        size: 24,
+      ),
     );
   }
 }
@@ -350,7 +475,7 @@ class _NutritionChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 3),
       decoration: BoxDecoration(
         color: color.withOpacity(0.1),
         borderRadius: BorderRadius.circular(6),
@@ -367,12 +492,4 @@ class _NutritionChip extends StatelessWidget {
       ),
     );
   }
-}
-
-class NutrientInfo {
-  final String type;
-  final int amount;
-  final Color color;
-
-  NutrientInfo({required this.type, required this.amount, required this.color});
 }

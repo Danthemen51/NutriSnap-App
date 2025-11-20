@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/app_providers.dart';
 
-class CaloriesLeftSection extends StatelessWidget {
+class CaloriesLeftSection extends ConsumerWidget {
   const CaloriesLeftSection({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    int caloriesLeft = 500;
-    int dailyTarget = 2500;
-    int caloriesConsumed = dailyTarget - caloriesLeft;
-    double progressValue = caloriesConsumed / dailyTarget;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final caloriesLeft = ref.watch(caloriesLeftProvider);
+    final dailyGoals = ref.watch(dailyGoalsProvider);
+    final consumed = ref.watch(consumedNutrientsProvider);
+    final progress = ref.watch(nutritionProgressProvider);
+
+    final caloriesConsumed = consumed['calories']!.toInt();
+    final dailyTarget = dailyGoals['calories']!;
+    final progressValue = progress['calories']!;
 
     return Column(
       children: [
@@ -29,7 +35,7 @@ class CaloriesLeftSection extends StatelessWidget {
                     ),
                     SizedBox(width: 4),
                     Text(
-                      'Calories left',
+                      'Kalori tersisa',
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.grey[600],
@@ -41,7 +47,7 @@ class CaloriesLeftSection extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  'Daily target: $dailyTarget kcal',
+                  'Target harian: $dailyTarget kcal',
                   style: TextStyle(
                     fontSize: 11,
                     color: Colors.grey[500],
@@ -66,7 +72,7 @@ class CaloriesLeftSection extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'kcal left',
+                  'kcal tersisa',
                   style: TextStyle(
                     fontSize: 11,
                     color: Colors.grey[500],
@@ -93,7 +99,7 @@ class CaloriesLeftSection extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-                  // Progress Fill
+                  // Progress Fill - OTOMATIS berdasarkan caloriesConsumed
                   LayoutBuilder(
                     builder: (context, constraints) {
                       return Container(
@@ -115,7 +121,7 @@ class CaloriesLeftSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Consumed: $caloriesConsumed kcal',
+                  'Terkonsumsi: $caloriesConsumed kcal',
                   style: TextStyle(
                     fontSize: 11,
                     color: Colors.grey[600],

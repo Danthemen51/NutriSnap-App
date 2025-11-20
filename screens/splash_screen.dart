@@ -11,7 +11,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen>
-    with TickerProviderStateMixin {  // ✅ UBAH KE TickerProviderStateMixin
+    with TickerProviderStateMixin {  
   late AnimationController _mainController;
   late Animation<double> _logoScaleAnimation;
   late Animation<double> _logoOpacityAnimation;
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen>
     // Main logo animation controller
     _mainController = AnimationController(
       duration: const Duration(milliseconds: 1800),
-      vsync: this,  // ✅ SEMUA CONTROLLER PAKAI 'this' YANG SAMA
+      vsync: this,
     );
 
     // Logo animations
