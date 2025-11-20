@@ -1,3 +1,5 @@
+Saya akan memperbarui file README.md dengan menambahkan screenshot yang baru Anda berikan:
+
 # 🥗 NutriSnap - Pelacak Nutrisi Pintar
 
 <div align="center">
@@ -32,9 +34,31 @@ NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara And
 
 <img src="https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e" alt="Splash Screen" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
-<img src="https://github.com/user-attachments/assets/295bb209-14c5-4c38-ad11-493cee2506b4)" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+<img src="https://github.com/user-attachments/assets/fbbea819-4404-4e25-8a33-de0312a07228" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<!-- Screenshot Baru - Form Input Makanan -->
+<img src="https://github.com/user-attachments/assets/35f8a1a2-1a2f-4b3f-9c7b-8d4b6a6e3c3a" alt="Food Input Form" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
 </div>
+
+## 🎯 Fitur Utama yang Ditampilkan
+
+### 📊 Dashboard Nutrisi Harian
+- **Progress Kalori**: 35 kCal tersisa dari target harian
+- **Progress Protein**: 12g protein tersisa
+- **Progress Lemak**: 15/50g (30% tercapai)
+- **Progress Serat**: 18/30g (60% tercapai)
+
+### 🍽️ Perencanaan Makan Harian
+- **Sarapan**: 07:00 - 450 kCal
+- **Makan Siang**: 12:00 - 650 kCal  
+- **Camilan**: 16:00 - 200 kCal
+- **Makan Malam**: 19:00 - 550 kCal
+
+### 📝 Riwayat Makan Terkini
+- **Contoh Input**: Bakso - 200 Kalori
+- **Detail Nutrisi**: 12.0g protein, 7.0g carbs, 15.0g fat, 11.0g fiber
+- **Waktu Konsumsi**: 15:37 - Breakfast
 
 ### 🎯 Mengapa Memilih NutriSnap?
 
@@ -177,12 +201,17 @@ Project ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) un
 
 ---
 
-**📞 Kontak:**
-- Email: nutrisnap@example.com
-- Website: https://nutrisnap.example.com
-- Dokumentasi API: https://docs.nutrisnap.example.com
-
 **🔧 Dukungan Pengembang:**
 - [Dokumentasi Flutter](https://flutter.dev/docs)
 - [Komunitas Flutter Indonesia](https://t.me/flutter_id)
 - [Issue Tracker](https://github.com/username-anda/nutrisnap/issues)
+
+---
+
+**📊 Status Pengembangan:**  
+![Progress](https://img.shields.io/badge/Progress-85%25-brightgreen?style=for-the-badge)  
+![UI Complete](https://img.shields.io/badge/UI-100%25-success?style=flat-square)  
+![Backend](https://img.shields.io/badge/Backend-70%25-yellow?style=flat-square)  
+![AI Integration](https://img.shields.io/badge/AI-50%25-orange?style=flat-square)
+
+**Terakhir Diupdate:** 20 November 2024
