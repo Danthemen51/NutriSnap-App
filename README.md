@@ -27,7 +27,7 @@ NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara And
 
 | Home Screen 1 | Home Screen 2 | Splash Screen |
 |:--------------:|:------------------:|:-------------:|
-| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Home2](![Screenshot_20251120-154033](https://github.com/user-attachments/assets/e3de5886-a11f-424b-aab9-340f01575736)
+| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Home2](https://github.com/user-attachments/assets/e3de5886-a11f-424b-aab9-340f01575736)
 ) | ![Splash](https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e) |
 
 </div>
