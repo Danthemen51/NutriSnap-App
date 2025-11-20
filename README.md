@@ -34,10 +34,7 @@ NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara And
 
 <img src="https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e" alt="Splash Screen" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
-<img src="https://github.com/user-attachments/assets/fbbea819-4404-4e25-8a33-de0312a07228" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-
-<!-- Screenshot Baru - Form Input Makanan -->
-<img src="https://github.com/user-attachments/assets/35f8a1a2-1a2f-4b3f-9c7b-8d4b6a6e3c3a" alt="Food Input Form" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+<img src="https://github.com/user-attachments/assets/d464447e-c200-4196-b6f6-ac555a5c8cfe" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
 </div>
 
