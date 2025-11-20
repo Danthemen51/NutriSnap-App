@@ -11,24 +11,28 @@
 
 </div>
 
-## 🧑‍💻Author
-- Dandi Mulyana 232101182
-- Nopi Damayanti 232101261
+## 🧑‍💻 Author
+- **Dandi Mulyana** - 232101182
+- **Nopi Damayanti** - 232101261
 
 ## 🌟 Tentang NutriSnap
 
 NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara Anda melacak nutrisi harian. Dengan menggabungkan teknologi AI mutakhir dan desain yang user-friendly, kami membuat pola makan sehat menjadi lebih sederhana, lebih cerdas, dan lebih mudah diakses daripada sebelumnya.
 
-## Link projek GDrive : https://drive.google.com/drive/folders/15CCahC3HOCln5zTSXHR4RmSr2qmK1ngJ?usp=drive_link
+## 📁 Link Projek
+**Google Drive:** https://drive.google.com/drive/folders/15CCahC3HOCln5zTSXHR4RmSr2qmK1ngJ?usp=drive_link
 
 ## 📱 Tangkapan Layar
 
-<div align="center">
+<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
 
-| Home Screen 1 | Home Screen 2 | Splash Screen |
-|:--------------:|:------------------:|:-------------:|
-| ![Home1](https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513) | ![Home2](https://github.com/user-attachments/assets/e3de5886-a11f-424b-aab9-340f01575736)
-) | ![Splash](https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e) |
+<img src="https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513" alt="Home Screen 1" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/e3de5886-a11f-424b-aab9-340f01575736" alt="Home Screen 2" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e" alt="Splash Screen" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/fbbea819-4404-4e25-8a33-de0312a07228" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
 </div>
 
@@ -170,3 +174,15 @@ Project ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) un
 *Dibangun dengan ❤️ menggunakan Flutter*
 
 </div>
+
+---
+
+**📞 Kontak:**
+- Email: nutrisnap@example.com
+- Website: https://nutrisnap.example.com
+- Dokumentasi API: https://docs.nutrisnap.example.com
+
+**🔧 Dukungan Pengembang:**
+- [Dokumentasi Flutter](https://flutter.dev/docs)
+- [Komunitas Flutter Indonesia](https://t.me/flutter_id)
+- [Issue Tracker](https://github.com/username-anda/nutrisnap/issues)
