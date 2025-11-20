@@ -1,1 +1,214 @@
-"# NutriSnap-App" 
+Saya akan memperbarui file README.md dengan menambahkan screenshot yang baru Anda berikan:
+
+# 🥗 NutriSnap - Pelacak Nutrisi Pintar
+
+<div align="center">
+
+![Flutter](https://img.shields.io/badge/Flutter-3.19-blue?style=for-the-badge&logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-3.2-blue?style=for-the-badge&logo=dart)
+![AI-Powered](https://img.shields.io/badge/Ditenagai-AI-success?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-informational?style=for-the-badge)
+
+**Revolusionarkan Perjalanan Kesehatan Anda dengan Pelacakan Nutrisi Berbasis AI**
+
+</div>
+
+## 🧑‍💻 Author
+- **Dandi Mulyana** - 232101182
+- **Nopi Damayanti** - 232101261
+
+## 🌟 Tentang NutriSnap
+
+NutriSnap adalah aplikasi mobile inovatif yang dirancang untuk mengubah cara Anda melacak nutrisi harian. Dengan menggabungkan teknologi AI mutakhir dan desain yang user-friendly, kami membuat pola makan sehat menjadi lebih sederhana, lebih cerdas, dan lebih mudah diakses daripada sebelumnya.
+
+## 📁 Link Projek
+**Google Drive:** https://drive.google.com/drive/folders/15CCahC3HOCln5zTSXHR4RmSr2qmK1ngJ?usp=drive_link
+
+## 📱 Tangkapan Layar
+
+<div align="center" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+
+<img src="https://github.com/user-attachments/assets/249f32b3-b947-45ec-833d-328793782513" alt="Home Screen 1" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/e3de5886-a11f-424b-aab9-340f01575736" alt="Home Screen 2" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/63f5b959-d1dd-4fd8-916a-efef1677db3e" alt="Splash Screen" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+<img src="https://github.com/user-attachments/assets/d464447e-c200-4196-b6f6-ac555a5c8cfe" alt="Form Input Makan" width="200" height="400" style="border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+
+</div>
+
+## 🎯 Fitur Utama yang Ditampilkan
+
+### 📊 Dashboard Nutrisi Harian
+- **Progress Kalori**: 35 kCal tersisa dari target harian
+- **Progress Protein**: 12g protein tersisa
+- **Progress Lemak**: 15/50g (30% tercapai)
+- **Progress Serat**: 18/30g (60% tercapai)
+
+### 🍽️ Perencanaan Makan Harian
+- **Sarapan**: 07:00 - 450 kCal
+- **Makan Siang**: 12:00 - 650 kCal  
+- **Camilan**: 16:00 - 200 kCal
+- **Makan Malam**: 19:00 - 550 kCal
+
+### 📝 Riwayat Makan Terkini
+- **Contoh Input**: Bakso - 200 Kalori
+- **Detail Nutrisi**: 12.0g protein, 7.0g carbs, 15.0g fat, 11.0g fiber
+- **Waktu Konsumsi**: 15:37 - Breakfast
+
+### 🎯 Mengapa Memilih NutriSnap?
+
+> "Menghitung kalori secara tradisional rumit dan memakan waktu. Kami mengubahnya."
+
+Dengan NutriSnap, cukup foto makanan Anda dan biarkan AI canggih kami yang melakukan sisanya. Tidak perlu input manual, tidak ada lagi tebak-tebakan - hanya analisis nutrisi yang akurat dan instan di ujung jari Anda.
+
+## 🚀 Fitur Utama
+
+### 📊 Dashboard Pintar
+- **Ringkasan Komprehensif**: Dapatkan gambaran lengkap nutrisi harian Anda dalam sekali pandang
+- **Pelacakan Progress Visual**: Indikator progress lingkaran yang indah untuk kalori dan makronutrien
+- **Kalender 7 Hari**: Lacak perjalanan nutrisi Anda di hari yang berbeda dengan mulus
+- **Update Real-time**: Monitoring progress langsung saat Anda mencatat makanan
+
+### 🥘 Perencanaan Makan yang Mudah
+- **Jadwal Makan Harian**: Perencanaan terorganisir untuk sarapan, makan siang, makan malam, dan camilan
+- **Pengingat Cerdas**: Tidak pernah melewatkan waktu makan dengan penjadwalan yang intuitif
+- **Target Nutrisi**: Target yang dipersonalisasi berdasarkan tujuan kesehatan Anda
+
+### 🤖 Analisis Nutrisi Berbasis AI (Segera Hadir)
+- **Integrasi Google ML Kit**: Pengenalan makanan canggih dari gambar
+- **Model TensorFlow**: Estimasi kalori dan nutrisi yang akurat
+- **Deteksi Makanan Otomatis**: Identifikasi beberapa item makanan dalam satu foto
+- **Estimasi Ukuran Porsi**: Perhitungan cerdas untuk data nutrisi yang presisi
+
+## 🛠 Keunggulan Teknis
+
+### Arsitektur & Performa
+```
+🏗 Clean Architecture + Riverpod State Management
+🎨 Animasi Kustom & Transisi UI yang Smooth
+📱 Desain Responsif Penuh
+⚡ Performa Optimal dengan Const Widgets
+```
+
+### Tech Stack
+- **Frontend**: Flutter 3.19 + Dart 3.2
+- **Manajemen State**: Riverpod untuk state yang predictable
+- **UI/UX**: Material Design 3 dengan tema kustom
+- **Animasi**: Flutter Native Animations
+- **AI Masa Depan**: Google ML Kit + TensorFlow Lite
+
+## 🎯 Untuk Siapa NutriSnap?
+
+### 👥 Cocok Untuk:
+- **Pecinta Kesehatan** yang melacak makro dan kalori
+- **Pengelola Berat Badan** dengan tujuan spesifik
+- **Profesional Fitness** yang memantau nutrisi klien
+- **Profesional Sibuk** yang butuh pencatatan makanan cepat
+- **Keluarga** yang mempromosikan kebiasaan makan sehat
+- **Orang dengan Pantangan Makanan** yang mengelola kebutuhan spesifik
+
+## 🔮 Visi Masa Depan
+
+### Fase 1 ✅ - Pelacakan Inti
+- Pelacakan nutrisi dasar dengan input manual
+- Visualisasi progress dan penetapan tujuan
+
+### Fase 2 🚧 - Integrasi AI  
+- Google ML Kit untuk pengenalan makanan
+- Analisis gambar dasar dan deteksi makanan
+
+### Fase 3 🔮 - AI Lanjutan
+- Model TensorFlow untuk analisis nutrisi presisi
+- Rekomendasi yang dipersonalisasi
+- Estimasi ukuran porsi
+
+### Fase 4 🌟 - Pelatih Nutrisi AI
+- Perencanaan nutrisi prediktif
+- Analisis tren kesehatan
+- Saran makanan yang dipersonalisasi
+
+## 🏃‍♂️ Memulai
+
+### Prasyarat
+- Flutter SDK 3.19 atau lebih tinggi
+- Dart 3.2 atau lebih tinggi
+- Android Studio/VSCode dengan ekstensi Flutter
+
+### Instalasi
+```bash
+# Clone repository
+git clone https://github.com/username-anda/nutrisnap.git
+
+# Masuk ke direktori project
+cd nutrisnap
+
+# Install dependencies
+flutter pub get
+
+# Jalankan aplikasi
+flutter run
+```
+
+### Build untuk Produksi
+```bash
+# Build APK untuk Android
+flutter build apk --release
+
+# Build IPA untuk iOS
+flutter build ipa --release
+```
+
+## 🤝 Berkontribusi
+
+Kami menyambut kontribusi! Baik Anda:
+- 🐛 Melaporkan bug
+- 💡 Menyarankan fitur baru
+- 📝 Meningkatkan dokumentasi
+- 🔧 Mengirimkan pull request
+
+Silakan baca [Panduan Kontribusi](CONTRIBUTING.md) kami untuk memulai.
+
+## 📄 Lisensi
+
+Project ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detail.
+
+## 🙏 Ucapan Terima Kasih
+
+- Tim Flutter untuk framework yang luar biasa
+- Google ML Kit untuk kemampuan AI
+- Komunitas TensorFlow untuk sumber daya machine learning
+- Semua kontributor dan beta tester kami
+
+---
+
+<div align="center">
+
+### 💚 Mulai Transformasi Kesehatan Anda Hari Ini!
+
+**Unduh NutriSnap dan rasakan masa depan pelacakan nutrisi.**
+
+[![Dapatkan di Google Play](https://img.shields.io/badge/Google_Play-Segera_Hadir-green?style=for-the-badge&logo=google-play)](https://play.google.com)
+[![Unduh di App Store](https://img.shields.io/badge/App_Store-Segera_Hadir-blue?style=for-the-badge&logo=app-store)](https://appstore.com)
+
+*Dibangun dengan ❤️ menggunakan Flutter*
+
+</div>
+
+---
+
+**🔧 Dukungan Pengembang:**
+- [Dokumentasi Flutter](https://flutter.dev/docs)
+- [Komunitas Flutter Indonesia](https://t.me/flutter_id)
+- [Issue Tracker](https://github.com/username-anda/nutrisnap/issues)
+
+---
+
+**📊 Status Pengembangan:**  
+![Progress](https://img.shields.io/badge/Progress-85%25-brightgreen?style=for-the-badge)  
+![UI Complete](https://img.shields.io/badge/UI-100%25-success?style=flat-square)  
+![Backend](https://img.shields.io/badge/Backend-70%25-yellow?style=flat-square)  
+![AI Integration](https://img.shields.io/badge/AI-50%25-orange?style=flat-square)
+
+**Terakhir Diupdate:** 20 November 2024
